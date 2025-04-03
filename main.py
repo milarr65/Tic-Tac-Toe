@@ -157,22 +157,6 @@ def handle_input(user_input:str, cells_taken:list[int]):
                 break  # Valid input, exit loop
 
     return new_input  # Successfully validated input
-
-    # while True:
-    #     try:
-    #         user_input = int(user_input)
-    #         if user_input in cells_taken: 
-    #             user_input = input("That cell is already filled. Choose another one: ")
-    #         elif len(user_input) > 1:
-    #             user_input = input("Invalid input. Type only one number at a time: ")
-    #         else:
-    #             return user_input
-    #     except ValueError:
-    #         print("Invalid input. Please only type numbers while playing: ")
-    #         if player == "you":
-    #             user_input = input("Your turn: ")
-    #         else:
-    #             user_input = input(f"Player {player}'s turn: ")
  
 def single_game():    
     current_grid = base_layout.copy()  # Create copy of base_layout so the grid resets every game
@@ -284,10 +268,3 @@ while True:
             print("That is not a valid command.")
     
     user = input('\nType anything: ')
-
-# let user choice to play with ai or with a friend
-# handle ai(random choice)
-# handle you won game over
-# handle you lost game over
-# handle layout is filled so game over // it's a tie
-# option to restart, quit, and play
