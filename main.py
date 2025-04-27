@@ -2,7 +2,7 @@ import random
 import copy
 
 base_layout = {
-        1: " []", 2: "[]", 3: "[]\n",
+        1: "[]", 2: "[]", 3: "[]\n",
         4: "[]", 5: "[]", 6: "[]\n",
         7: "[]", 8: "[]", 9: "[]", 
         }
@@ -72,7 +72,7 @@ def random_choice(cells_taken:list[int]):
 
     return choice
 
-def check_win(layout:dict, mark:str):
+def check_win(layout:dict[int,str], mark:str):
     """ 
     Analyses the game's grid to determine if the current player has won.
 
@@ -249,13 +249,13 @@ while True:
                     
 
         case "-m":
-                match multi_game():
-                    case "player1":
-                        print("Player 1 won, Congrats 🎉")
-                    case "player2":
-                        print("Player 2 won, Great game! 💪")
-                    case "tie":
-                        print("Looks like it's a tie this time 🤷")
+            match multi_game():
+                case "player1":
+                    print("Player 1 won, Congrats 🎉")
+                case "player2":
+                    print("Player 2 won, Great game! 💪")
+                case "tie":
+                    print("Looks like it's a tie this time 🤷")
 
         case "-h":
             print(commands)
